@@ -36,8 +36,8 @@ Robust backend API for LearnSphere Connect, a comprehensive educational platform
 ### 1. Clone the Repository
 
 ```bash
-git clone <your-backend-repository-url>
-cd <backend-repository-folder>
+git clone https://github.com/space-together-org/space-together-backend-v0.03.git
+cd space-together-backend-v0.03
 ```
 
 ### 2. Install Dependencies
@@ -46,10 +46,10 @@ Using npm:
 ```bash
 npm install
 ```
-Or using yarn:
+<!-- Or using yarn:
 ```bash
 yarn install
-```
+``` -->
 
 ### 3. Set Up Environment Variables
 
@@ -59,7 +59,7 @@ Create a `.env` file in the root of the backend project directory. Copy the cont
 # .env
 
 # Application
-PORT=3001 # Or your preferred port for the backend
+PORT=4777
 
 # Database
 DATABASE_URL="mongodb+srv://<user>:<password>@<cluster>/<database_name>?retryWrites=true&w=majority" # Your MongoDB connection string
@@ -78,23 +78,23 @@ Since you are using MongoDB with Prisma, you'll typically "push" the schema:
 ```bash
 npx prisma db push
 ```
-For initial data seeding (if you have a seed script):
+<!-- For initial data seeding (if you have a seed script):
 ```bash
 npx prisma db seed
-```
+``` -->
 
 ## ධ Running the Application
 
 ### Development Mode
 
 ```bash
-npm run start:dev
+npm run dev
 ```
-Or using yarn:
+<!-- Or using yarn:
 ```bash
 yarn start:dev
-```
-This will start the NestJS development server, usually on the port specified in your `.env` file (e.g., `http://localhost:3001`). The server will watch for file changes and automatically reload.
+``` -->
+This will start the NestJS development server, usually on the port specified in your `.env` file (e.g., `http://localhost:4777`). The server will watch for file changes and automatically reload.
 
 ### Production Mode
 
@@ -110,7 +110,7 @@ yarn start:prod
 
 ## 📖 API Documentation
 
-Once the development server is running, API documentation (Swagger UI) is typically available at `http://localhost:<PORT>/api` (e.g., `http://localhost:3001/api`). Check your NestJS Swagger setup for the exact path.
+Once the development server is running, API documentation (Swagger UI) is typically available at `http://localhost:<PORT>/api` (e.g., `http://localhost:4777/api`). Check your NestJS Swagger setup for the exact path.
 
 ## 📁 Project Structure (Simplified)
 
