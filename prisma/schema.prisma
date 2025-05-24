@@ -240,7 +240,7 @@ model User {
     // --- Identification ---
     id            String          @id @default(auto()) @map("_id") @db.ObjectId
     email         String          @unique
-    username      String          @unique
+    username      String?         @unique
     password      String?
     role          UserRole?
     accounts      Account[]
@@ -257,11 +257,9 @@ model User {
     dateOfBirth   DateTime?
     bio           String?
     address       Address?
-
-    // --- Account Status ---
-    isEmailVerified Boolean   @default(false)
-    isActive        Boolean   @default(true)
-    lastLogin       DateTime?
+    emailVerified DateTime?
+    isActive      Boolean         @default(true)
+    lastLogin     DateTime?
 
     // --- Timestamps ---
     createdAt DateTime @default(now())
